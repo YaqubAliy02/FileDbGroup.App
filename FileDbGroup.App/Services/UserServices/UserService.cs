@@ -25,9 +25,9 @@ namespace FileDbGroup.App.Services.UserServices
 
             foreach (User user in users)
             {
-                this.loggingBroker.LogInforamation($"{user.Id}, {user.Name}");
+                this.loggingBroker.LogInforamation($"{user.Id}. {user.Name}");
             }
-            this.loggingBroker.LogInforamation("===End of users");
+            this.loggingBroker.LogInforamation("===End of users===");
         }
         private User CreateAndLogInvalidUser()
         {
