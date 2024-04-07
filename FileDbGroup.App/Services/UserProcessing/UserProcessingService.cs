@@ -22,5 +22,25 @@ namespace FileDbGroup.App.Services.UserProcessing
             user.Name = name;
             this.userService.AddUser(user);
         }
+
+        public void DisplayUsers()
+        {
+            this.userService.ShowUsers();
+        }
+
+        public void UpdateUser(int id, string name)
+        {
+            User user = new User()
+            {
+                Id = id,
+                Name = name
+            };
+            this.userService.Update(user);
+        }
+
+        public void DeleteUser(int id)
+        {
+            this.userService.Delete(id);
+        }
     }
 }
